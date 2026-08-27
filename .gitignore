@@ -1,0 +1,9 @@
+data/
+config/config.yaml
+frontend/node_modules/
+frontend/dist/
+backend/internal/web/dist/*
+!backend/internal/web/dist/index.html
+*.db
+*.db-wal
+*.db-shm

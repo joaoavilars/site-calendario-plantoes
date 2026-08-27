@@ -1,0 +1,30 @@
+# Copie este arquivo para config.yaml e preencha os valores.
+# O bot_token também pode vir da variável de ambiente TELEGRAM_BOT_TOKEN.
+
+timezone: America/Sao_Paulo
+
+http:
+  porta: 8080
+
+banco:
+  caminho: /data/plantoes.db
+
+telegram:
+  # Token do bot criado no @BotFather
+  bot_token: ""
+  # ID do grupo (negativo para grupos, ex.: "-1001234567890").
+  # Veja docs/manual-de-uso.md para descobrir o chat_id do seu grupo.
+  chat_id: ""
+
+alertas:
+  # Resumo da escala do dia, enviado toda manhã
+  resumo_diario:
+    habilitado: true
+    horario: "07:30"
+  # Lembrete individual antes de cada plantão começar
+  lembrete_plantao:
+    habilitado: true
+    antecedencia_minutos: 15
+  # Aviso no grupo quando uma substituição/troca é confirmada
+  aviso_troca_confirmada:
+    habilitado: true

@@ -1,0 +1,19 @@
+services:
+  plantoes:
+    build: .
+    container_name: calendario-plantoes
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/data
+      - ./config/config.yaml:/config/config.yaml:ro
+    environment:
+      - TZ=America/Sao_Paulo
+      # Opcional: sobrepõe o bot_token do config.yaml sem gravá-lo em arquivo
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN:-}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/api/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
