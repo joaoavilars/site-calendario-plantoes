@@ -7,3 +7,9 @@ backend/internal/web/dist/*
 *.db
 *.db-wal
 *.db-shm
+
+# Arquivos internos do projeto (memória do Claude Code, prompt de referência, print da planilha antiga)
+CLAUDE.md
+PROMPT_IDEAL.md
+planilha-atual.png
+projeto-calendario-plantoes.md
